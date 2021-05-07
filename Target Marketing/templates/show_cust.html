@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block title %}Customer list{% endblock %}
+{% block heading %}Target audience{% endblock %}
+{% block content %}
+<table>
+    <thead>
+      <tr>
+      <th scope = "col">Monday</th>
+      <th scope = "col">Tuesday</th>
+      <th scope = "col">Wednesday</th>
+      <th scope = "col">Thursday</th>
+      <th scope = "col">Friday</th>
+      <th scope = "col">Saturday</th>
+      <th scope = "col">Sunday</th>
+    </tr>
+    </thead> 
+    <tbody>
+      {% for item in range(0, 10) %}
+        <tr>
+          <td>{{result["monday"][item]}}</td>
+          <td>{{result["tuesday"][item]}}</td>
+          <td>{{result["wednesday"][item]}}</td>
+          <td>{{result["thursday"][item]}}</td>
+          <td>{{result["friday"][item]}}</td>
+          <td>{{result["saturday"][item]}}</td>
+          <td>{{result["sunday"][item]}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
